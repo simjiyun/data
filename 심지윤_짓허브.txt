@@ -1,0 +1,73 @@
+https://www.lainyzine.com/ko/article/useful-git-settings-when-using-github-multi-account/
+
+
+
+다른계정
+계정추가
+mlbksj_412@naver.com
+simjiyun
+qorgusdk59!
+520920
+
+D:/심지윤깃허브/data
+
+1893709 입니다.ᐟ.ᐟ :
+
+
+d:/심지윤깃허브/data
+
+/c/Users/hp/.ssh/id_rsa
+ssh-add /c/Users/hp/.ssh/github_me
+
+ssh-keygen -t rsa -b 4096 -C "mlbksj_412@naver.com"
+
+/Users/you/.ssh/github_me
+
+
+$ ssh-add -K /c/Users/hp/.ssh/github_me
+
+
+hp@DESKTOP-63J9VR1 MINGW64 ~/.ssh (master)
+$ ls
+github_me  github_me.pub  id_rsa  id_rsa.pub
+
+
+github_me
+
+ssh-add /c/Users/hp/.ssh/github_me
+
+$ ssh-add -l
+어쩌구저쩌구 your_email@example.com (RSA)
+
+
+github_me  github_me.pub  id_rsa  id_rsa.pub
+
+cat /c/Users/hp/.ssh/github_me.pub
+
+
+$ cat /c/Users/hp/.ssh/github_me
+# Default account
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_primary
+
+# Secondary account
+Host github.com github_me설명
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_me
+
+$ ssh-add -l 4096 SHA256:zyxhfwjfewokjfd moonseonjong@naver.com (RSA) 4096 SHA256:abcdkfsjklerwjl mlbksj_412@naver.com (RSA)
+///////////////////////////////////////////////////
+$ eval `ssh-agent`
+Agent pid 897
+
+$ ssh-add -D
+All identities removed.
+
+$ ssh-keygen -t rsa -b 4096 -C "mlbksj_412@naver.com"
+
+$ ssh-add -K /c/Users/hp/.ssh/id_sim
+
+
